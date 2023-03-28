@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Service Requests</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Service</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% serviceRequests.forEach(serviceRequest => { %>
+          <tr>
+            <td><%= serviceRequest.date.toDateString() %></td>
+            <td><%= serviceRequest.time %></td>
+            <td><%= serviceRequest.name %></td>
+            <td><%= serviceRequest.phone %></td>
+            <td><%= serviceRequest.email %></td>
+            <td><%= serviceRequest.service %></td>
+            <td><%= serviceRequest.notes %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>
